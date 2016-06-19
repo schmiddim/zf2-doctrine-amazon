@@ -17,7 +17,8 @@
   "require": {
     "php": ">=5.3.3",
     "zendframework/zendframework" : "~2.5",
-    "doctrine/doctrine-orm-module": "0.7.*"
+    "doctrine/doctrine-orm-module": "0.7.*",
+    "schmiddim/amazon-wish-lister":"dev-master"
 
 
   },
