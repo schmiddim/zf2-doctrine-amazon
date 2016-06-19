@@ -2,15 +2,28 @@
 namespace Schmiddim\Amazon;
 
 use Schmiddim\Amazon\Controller\CliController;
+use Schmiddim\Amazon\Controller\Factories\CliControllerFactory;
+use Schmiddim\Amazon\Doctrine\Services\Product\ProductServiceInterface;
+use Schmiddim\Amazon\Doctrine\Factories\ProductServiceFactory;
+use Schmiddim\Amazon\Doctrine\Services\Wishlist\WishlistServiceInterface;
+use Schmiddim\Amazon\Doctrine\Factories\WishlistServiceFactory;
 
 return array(
     'controllers' => array(
-        'invokables' => array(
-            CliController::class => CliController::class
+        'factories' => array(
+            CliController::class =>
+                CliControllerFactory::class
         )
-
-
     ),
+
+    'service_manager' => array(
+        'factories' => array(
+            ProductServiceInterface::class => ProductServiceFactory::class,
+            WishlistServiceInterface::class => WishlistServiceFactory::class
+        ),
+    ),
+
+
     'doctrine' => array(
         'driver' => array(
             'application_entities' => array(
@@ -33,12 +46,21 @@ return array(
             'routes' => array(
                 'import-wishlist' => array(
                     'options' => array(
-                        // add [ and ] if optional ( ex : [<doname>] )
                         'route' => 'importWishlist [-v] <id>',
                         'defaults' => array(
-                            '__NAMESPACE__' => 'Schmiddim\Amazon\Controller',
-                            'controller' => 'CliController',
+
+                            'controller' => CliController::class,
                             'action' => 'import'
+                        ),
+                    ),
+                ),
+                'product' => array(
+                    'options' => array(
+                        'route' => 'product <id>',
+                        'defaults' => array(
+
+                            'controller' => CliController::class,
+                            'action' => 'product'
                         ),
                     ),
                 )

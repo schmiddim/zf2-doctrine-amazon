@@ -125,7 +125,7 @@ class Wishlist
     }
 
     /**
-     * @param mixed $products
+     * @param Product $product
      */
     public function setProduct($product)
     {

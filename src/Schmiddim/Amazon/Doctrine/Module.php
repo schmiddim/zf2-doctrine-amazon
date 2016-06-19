@@ -10,11 +10,7 @@ use Zend\ModuleManager\Feature\ControllerPluginProviderInterface;
 use Zend\ModuleManager\Feature\ViewHelperProviderInterface;
 use Zend\Mvc\ApplicationInterface;
 
-/**
- * Circlical ACL Admin Interface for BJYAuthorize
- *
- * @author Alexandre Lemaire <alemaire@circlical.com>
- */
+
 class Module implements
 	AutoloaderProviderInterface,
 	BootstrapListenerInterface,
