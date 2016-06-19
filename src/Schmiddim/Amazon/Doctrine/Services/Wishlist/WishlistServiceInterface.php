@@ -4,6 +4,7 @@
 namespace Schmiddim\Amazon\Doctrine\Services\Wishlist;
 
 
+use Doctrine\ORM\EntityManager;
 use Schmiddim\Amazon\Doctrine\Entities\Wishlist;
 
 interface WishlistServiceInterface
@@ -26,5 +27,10 @@ interface WishlistServiceInterface
      * @return null
      */
     public function persistWishList(Wishlist $wishlist);
+
+    /**
+     * @return EntityManager
+     */
+    public function getEntityManager();
 
 }

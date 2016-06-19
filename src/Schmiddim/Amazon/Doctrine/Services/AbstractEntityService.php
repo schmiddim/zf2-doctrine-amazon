@@ -38,7 +38,7 @@ abstract class AbstractEntityService
     /**
      * @return EntityManager
      */
-    protected function getEntityManager()
+    public function getEntityManager()
     {
         return $this->entityManager;
     }
