@@ -44,16 +44,6 @@ return array(
     'console' => array(
         'router' => array(
             'routes' => array(
-                'import-wishlist' => array(
-                    'options' => array(
-                        'route' => 'importWishlist [-v] <id>',
-                        'defaults' => array(
-
-                            'controller' => CliController::class,
-                            'action' => 'import'
-                        ),
-                    ),
-                ),
                 'product' => array(
                     'options' => array(
                         'route' => 'product <id>',
