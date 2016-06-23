@@ -6,8 +6,9 @@ namespace Schmiddim\Amazon\Doctrine\Services\Wishlist;
 
 use Doctrine\ORM\EntityManager;
 use Schmiddim\Amazon\Doctrine\Entities\Wishlist;
+use Schmiddim\Amazon\Doctrine\Services\EntityServiceInterface;
 
-interface WishlistServiceInterface
+interface WishlistServiceInterface extends EntityServiceInterface
 {
 
     /**

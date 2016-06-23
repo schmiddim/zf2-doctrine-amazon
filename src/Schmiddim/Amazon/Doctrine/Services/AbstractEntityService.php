@@ -5,7 +5,7 @@ namespace Schmiddim\Amazon\Doctrine\Services;
 
 use Doctrine\ORM\EntityManager;
 
-abstract class AbstractEntityService
+abstract class AbstractEntityService implements EntityServiceInterface
 {
     /**
      * @var EntityManager
@@ -28,7 +28,7 @@ abstract class AbstractEntityService
     }
 
 
-    protected function getRepository(){
+    public function getRepository(){
         if(null === $this->getRepositoryIdentifier()) {
             throw new \Exception('Repository Identifier not set');
         }
