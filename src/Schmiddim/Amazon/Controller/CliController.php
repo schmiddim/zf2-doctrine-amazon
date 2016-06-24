@@ -49,7 +49,6 @@ class CliController extends AbstractActionController
             "B00HQ2N52K",
             "B00B8XYO9G",
             "B00L3S2LWS",
-            "B00L3S2LWS",
             "c3d33ab7-5dc5-41e6-8d2a-0aadbcffb738",
             "B00NH3GL96",
             "B00EKH4FP0",
@@ -96,15 +95,31 @@ class CliController extends AbstractActionController
             "B00GS02S8S",
         );
         $countryCode = 'de';
+
+
+        $entities = $this->itemNotFoundService->getRepository()->findBy(['asin' => $ids]);
+
+        foreach ($entities as $entity) {
+            /** @var $entity ItemNotFound */
+
+            $id = array_search($entity->getAsin(), $ids);
+
+            if ($id) {
+                unset($ids[$id]);
+            }
+        }
         $resultSet = $this->apaiIOWrapper->getByASINS($ids, $countryCode);
         $notFound = $this->apaiIOWrapper->getItemsNotFound();
         foreach ($notFound[$countryCode] as $item) {
-            $itemNotFound = new ItemNotFound();
-            $itemNotFound->setAsin($item);
-            $itemNotFound->setSearchedDe(true);
-            $this->itemNotFoundService->getEntityManager()->persist($itemNotFound);
-        }
+
+            if (false === $this->itemNotFoundService->existsByAsin($item)) {
+                $itemNotFound = new ItemNotFound();
+                $itemNotFound->setAsin($item);
+                $itemNotFound->setSearchedDe(true);
+                $this->itemNotFoundService->getEntityManager()->persist($itemNotFound);
         $this->itemNotFoundService->getEntityManager()->flush();
+            }
+        }
     }
 
     public function productAction()

@@ -16,7 +16,7 @@ class ItemNotFound
 
 
     /**
-     * @ORM\Column(type="string")
+     * @ORM\Column(type="string", unique=true)
      */
     protected $asin;
 
