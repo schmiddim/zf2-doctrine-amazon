@@ -7,7 +7,8 @@ use Schmiddim\Amazon\Doctrine\Services\Product\ProductServiceInterface;
 use Schmiddim\Amazon\Doctrine\Factories\ProductServiceFactory;
 use Schmiddim\Amazon\Doctrine\Services\Wishlist\WishlistServiceInterface;
 use Schmiddim\Amazon\Doctrine\Factories\WishlistServiceFactory;
-
+use Schmiddim\Amazon\Doctrine\Services\ItemNotFound\ItemNotFoundServiceInterface;
+use Schmiddim\Amazon\Doctrine\Factories\ItemNotFoundFactory;
 return array(
     'controllers' => array(
         'factories' => array(
@@ -19,7 +20,8 @@ return array(
     'service_manager' => array(
         'factories' => array(
             ProductServiceInterface::class => ProductServiceFactory::class,
-            WishlistServiceInterface::class => WishlistServiceFactory::class
+            WishlistServiceInterface::class => WishlistServiceFactory::class,
+          ItemNotFoundServiceInterface::class => ItemNotFoundFactory::class
         ),
     ),
 
@@ -55,7 +57,7 @@ return array(
                 ),
                 'apaiio' => array(
                     'options' => array(
-                        'route' => 'apaiio <id>',
+                        'route' => 'apaiio',
                         'defaults' => array(
                             'controller' => CliController::class,
                             'action' => 'testNotFound'
