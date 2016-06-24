@@ -3,14 +3,14 @@
 
 namespace Schmiddim\Amazon\Controller;
 
+use Schmiddim\Amazon\Doctrine\Entities\ApaiIO\ItemNotFound;
 use Schmiddim\Amazon\Doctrine\Factories\Product;
 use Schmiddim\Amazon\Doctrine\Services\ItemNotFound\ItemNotFoundServiceInterface;
 use Schmiddim\Amazon\Doctrine\Services\Product\ProductServiceInterface;
 use Schmiddim\Amazon\Doctrine\Services\Wishlist\WishlistServiceInterface;
 use Schmiddim\Amazon\ProductApi\ApaiIOWrapper;
-use Schmiddim\Amazon\WishlistImporter\Services\SynchronizeDbAgainstAmazonInterface;
 use Zend\Mvc\Controller\AbstractActionController;
-use Schmiddim\Amazon\Doctrine\Entities\ApaiIO\ItemNotFound;
+
 class CliController extends AbstractActionController
 {
 

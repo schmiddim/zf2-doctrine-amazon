@@ -15,11 +15,11 @@ return array(
         ),
     ),
 
-        'amazon-apai' => array(
-            'AWS_API_KEY' => '<your api key>',
-            'AWS_API_SECRET_KEY' => '<your secret>',
-            'AWS_ASSOCIATE_TAG' => '<your tag>',
-        )
+    'amazon-apai' => array(
+        'AWS_API_KEY' => '<your api key>',
+        'AWS_API_SECRET_KEY' => '<your secret>',
+        'AWS_ASSOCIATE_TAG' => '<your tag>',
+    )
 ,
 
 
