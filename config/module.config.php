@@ -48,9 +48,17 @@ return array(
                     'options' => array(
                         'route' => 'product <id>',
                         'defaults' => array(
-
                             'controller' => CliController::class,
                             'action' => 'product'
+                        ),
+                    ),
+                ),
+                'apaiio' => array(
+                    'options' => array(
+                        'route' => 'apaiio <id>',
+                        'defaults' => array(
+                            'controller' => CliController::class,
+                            'action' => 'testNotFound'
                         ),
                     ),
                 )
