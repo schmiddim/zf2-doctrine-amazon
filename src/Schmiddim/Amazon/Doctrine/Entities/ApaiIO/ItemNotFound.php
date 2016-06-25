@@ -16,7 +16,7 @@ class ItemNotFound
 
 
     /**
-     * @ORM\Column(type="string", unique=true)
+     * @ORM\Column(type="string", unique=false)
      */
     protected $identifier;
 
@@ -90,7 +90,7 @@ class ItemNotFound
      */
     public function getIdentifier()
     {
-        return $this->identifier;
+        return mb_strtoupper($this->identifier);
     }
 
     /**
@@ -98,8 +98,8 @@ class ItemNotFound
      */
     public function setIdentifier($identifier)
     {
-        $identifier = strtoupper($identifier);
-        $this->identifier = $identifier;
+
+        $this->identifier = mb_strtoupper($identifier);
     }
 
     /**
@@ -115,7 +115,7 @@ class ItemNotFound
      */
     public function setIdentifierType($identifierType)
     {
-        $identifierType = strtoupper($identifierType);
+        $identifierType = mb_strtoupper($identifierType);
         $this->identifierType = $identifierType;
     }
 

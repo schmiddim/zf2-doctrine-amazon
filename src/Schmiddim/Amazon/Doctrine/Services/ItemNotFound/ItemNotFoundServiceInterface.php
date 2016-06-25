@@ -12,6 +12,6 @@ interface ItemNotFoundServiceInterface extends EntityServiceInterface
 
     public function findOneByAsin($asin);
 
-    public function findByAsin($asin);
+    public function findByAsin($asins = array());
     public function existsByAsin($asin);
 }
