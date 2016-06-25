@@ -2,6 +2,7 @@
 
 
 namespace Schmiddim\Amazon\Doctrine\Entities;
+
 use Doctrine\ORM\Mapping as ORM;
 
 /** @ORM\Entity */
@@ -71,6 +72,12 @@ class Product
      * cascade={"persist", "remove"})
      **/
     protected $offers = array();
+
+    /**
+     * @var ItemAttribute[]
+     * @ORM\ManyToMany(targetEntity="ItemAttribute", cascade={"persist", "remove"})
+     */
+    protected $itemAttributes = array();
 
     /**
      * @var Price
@@ -150,6 +157,18 @@ class Product
         $this->setDetailPageUrl((string)$element->DetailPageURL);
         $this->setMpn((string)$element->ItemAttributes->MPN);
 
+        //@todo images
+        //@todo price
+
+        $itemAttributeVars = get_object_vars($element->ItemAttributes);
+        foreach($itemAttributeVars as $name => $value) {
+            if(false == is_array($value)) {
+                $itemAttributeEntity = new ItemAttribute();
+                $itemAttributeEntity->setName($name);
+                $itemAttributeEntity->setValue($value);
+                $this->addItemAttribute($itemAttributeEntity);
+            }
+        }
     }
 
 
@@ -363,9 +382,30 @@ class Product
         $this->listPrice = $listPrice;
     }
 
+    /**
+     * @return ItemAttribute[]
+     */
+    public function getItemAttributes()
+    {
+        return $this->itemAttributes;
+    }
+
+    /**
+     * @param ItemAttribute[] $itemAttributes
+     */
+    public function setItemAttributes($itemAttributes)
+    {
+        $this->itemAttributes = $itemAttributes;
+    }
+
 
     /******automatic generated GETTERS + SETTERS *******************/
-
-
+    /**
+     * @param ItemAttribute $itemAttribute
+     */
+    public function addItemAttribute(ItemAttribute $itemAttribute)
+    {
+        $this->itemAttributes[] = $itemAttribute;
+    }
 
 }
