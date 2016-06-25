@@ -18,8 +18,12 @@ class ItemNotFound
     /**
      * @ORM\Column(type="string", unique=true)
      */
-    protected $asin;
+    protected $identifier;
 
+    /**
+     * @ORM\Column(type="string", unique=false)
+     */
+    protected $identifierType;
 
     /**
      * @ORM\Column(type="boolean")
@@ -47,21 +51,7 @@ class ItemNotFound
         $this->id = $id;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getAsin()
-    {
-        return $this->asin;
-    }
 
-    /**
-     * @param mixed $asin
-     */
-    public function setAsin($asin)
-    {
-        $this->asin = $asin;
-    }
 
     /**
      * @return mixed
@@ -94,6 +84,40 @@ class ItemNotFound
     {
         $this->searchedDe = $searchedDe;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getIdentifier()
+    {
+        return $this->identifier;
+    }
+
+    /**
+     * @param mixed $identifier
+     */
+    public function setIdentifier($identifier)
+    {
+        $identifier = strtoupper($identifier);
+        $this->identifier = $identifier;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getIdentifierType()
+    {
+        return $this->identifierType;
+    }
+
+    /**
+     * @param mixed $identifierType
+     */
+    public function setIdentifierType($identifierType)
+    {
+        $this->identifierType = $identifierType;
+    }
+
 
 
 

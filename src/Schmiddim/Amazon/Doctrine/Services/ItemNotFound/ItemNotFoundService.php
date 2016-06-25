@@ -20,15 +20,30 @@ class ItemNotFoundService extends AbstractEntityService implements ItemNotFoundS
 
     public function existsByAsin($asin)
     {
-        if (null !== $this->findByAsin($asin)) {
+        if (null !== $this->findOneByAsin($asin)) {
             return true;
         }
         return false;
     }
 
-    public function findByAsin($asin)
+    public function findOneByAsin($asin)
     {
-        $product = $this->getRepository()->findOneBy(array('asin' => $asin));
+        $product = $this->getRepository()->findOneBy(array(
+            'identifierType' => 'ASIN',
+            'identifier' => $asin
+
+
+        ));
         return $product;
+    }
+
+    public function findByAsin($asins = array())
+    {
+        return $this->getRepository()->findBy(array(
+            'identifierType' => 'ASIN',
+            'identifier' => $asins
+
+
+        ));
     }
 }

@@ -97,12 +97,13 @@ class CliController extends AbstractActionController
         $countryCode = 'de';
 
 
-        $entities = $this->itemNotFoundService->getRepository()->findBy(['asin' => $ids]);
+        $entities = $this->itemNotFoundService->findByAsin($ids);
+    #    $entities = $this->itemNotFoundService->getRepository()->findBy(['asin' => $ids]);
 
         foreach ($entities as $entity) {
             /** @var $entity ItemNotFound */
 
-            $id = array_search($entity->getAsin(), $ids);
+            $id = array_search($entity->getIdentifier(), $ids);
 
             if ($id) {
                 unset($ids[$id]);
@@ -114,7 +115,8 @@ class CliController extends AbstractActionController
 
             if (false === $this->itemNotFoundService->existsByAsin($item)) {
                 $itemNotFound = new ItemNotFound();
-                $itemNotFound->setAsin($item);
+                $itemNotFound->setIdentifier($item);
+                $itemNotFound->setIdentifierType('ASIN');
                 $itemNotFound->setSearchedDe(true);
                 $this->itemNotFoundService->getEntityManager()->persist($itemNotFound);
         $this->itemNotFoundService->getEntityManager()->flush();
