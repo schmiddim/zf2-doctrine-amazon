@@ -50,10 +50,11 @@ class ProductService extends AbstractEntityService implements ProductServiceInte
         $product->setByResponseObject($itemDetails);
 
         //check if we have it already in db
-        if ($this->existsProductByAsin($product->getAsin())) {
-            return null;
+        $searchForProduct = $this->getProductByAsin($product->getAsin());
+
+        if (null !== $searchForProduct) {
+            return $searchForProduct;
         }
-        //Check if the product is already in DB
 
 
         $imageSmall = new Image(
@@ -95,9 +96,9 @@ class ProductService extends AbstractEntityService implements ProductServiceInte
             $product->setOffers(array($offer));
         }
         //Persist
-        $entityManager = $this->getEntityManager();
+      /*  $entityManager = $this->getEntityManager();
         $entityManager->persist($product);
-        $entityManager->flush();
+        $entityManager->flush();*/
         return $product;
     }
 
