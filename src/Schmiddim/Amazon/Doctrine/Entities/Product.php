@@ -3,9 +3,6 @@
 
 namespace Schmiddim\Amazon\Doctrine\Entities;
 use Doctrine\ORM\Mapping as ORM;
-use Doctrine\ORM\Mapping\ManyToMany;
-use Doctrine\ORM\Mapping\OneToOne;
-use Doctrine\ORM\Mapping\JoinColumn;
 
 /** @ORM\Entity */
 class Product
@@ -63,21 +60,22 @@ class Product
     protected $title;
 
     /**
-     * @ManyToMany(targetEntity="Schmiddim\Amazon\Doctrine\Entities\Image"
+     * @var Image[]
+     * @ORM\ManyToMany(targetEntity="Schmiddim\Amazon\Doctrine\Entities\Image"
      *, cascade={"persist", "remove"})
      **/
     protected $images = array();
 
     /**
-     * @ManyToMany(targetEntity="Offer",
+     * @ORM\ManyToMany(targetEntity="Offer",
      * cascade={"persist", "remove"})
      **/
     protected $offers = array();
 
     /**
      * @var Price
-     * @OneToOne(targetEntity="Price" ,cascade={"persist", "remove"}))
-     * @JoinColumn(name="listPrice", referencedColumnName="id")
+     * @ORM\OneToOne(targetEntity="Price" ,cascade={"persist", "remove"}))
+     * @ORM\JoinColumn(name="listPrice", referencedColumnName="id")
      *
      */
     protected $listPrice;
@@ -97,6 +95,7 @@ class Product
     {
         $images = array();
         foreach ($this->images as $image) {
+
             if ($image->getType() === Image::SIZE_SMALL) {
                 $images [] = $image;
 
@@ -250,22 +249,6 @@ class Product
     public function setImages($images)
     {
         $this->images = $images;
-    }
-
-    /**
-     * @return Price[]
-     */
-    public function getPrices()
-    {
-        return $this->prices;
-    }
-
-    /**
-     * @param Price[] $prices
-     */
-    public function setPrices($prices)
-    {
-        $this->prices = $prices;
     }
 
     /**
