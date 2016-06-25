@@ -115,6 +115,7 @@ class ItemNotFound
      */
     public function setIdentifierType($identifierType)
     {
+        $identifierType = strtoupper($identifierType);
         $this->identifierType = $identifierType;
     }
 
