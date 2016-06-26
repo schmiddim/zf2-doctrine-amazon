@@ -201,6 +201,31 @@ class Product
         }
         return $itemAttributeEntities;
     }
+
+
+    public function hasIdentifier($identifier)
+    {
+
+        foreach ($this->itemAttributes as $attribute) {
+            switch ($attribute->getName()) {
+                case 'EAN':
+                    if ($attribute->getValue() === $identifier) {
+                        return $attribute->getName();
+                    }
+                continue;
+                case 'ISBN':
+                    if ($attribute->getValue() === $identifier) {
+                        return $attribute->getName();
+                    }
+              continue;
+            }
+
+        }
+        if($this->getAsin() === $identifier) {
+            return 'ASIN';
+        }
+        return false;
+    }
     /******automatic generated GETTERS + SETTERS *******************/
 
 
