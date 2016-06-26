@@ -1,0 +1,434 @@
+<?xml version="1.0" ?>
+<ItemLookupResponse xmlns="http://webservices.amazon.com/AWSECommerceService/2013-08-01">
+    <OperationRequest>
+        <HTTPHeaders>
+            <Header Name="UserAgent" Value="ApaiIO [2.0.0-DEV]"></Header>
+        </HTTPHeaders>
+        <RequestId>a1128005-fd32-4e6f-82b6-2f2f3ab07378</RequestId>
+        <Arguments>
+            <Argument Name="AWSAccessKeyId" Value="1C40MS11Y3T9CRFXPQ82"></Argument>
+            <Argument Name="AssociateTag" Value="httpwwwradika-21"></Argument>
+            <Argument Name="IdType" Value="ISBN"></Argument>
+            <Argument Name="ItemId" Value="3570049426"></Argument>
+            <Argument Name="Operation" Value="ItemLookup"></Argument>
+            <Argument Name="ResponseGroup" Value="Large"></Argument>
+            <Argument Name="SearchIndex" Value="All"></Argument>
+            <Argument Name="Service" Value="AWSECommerceService"></Argument>
+            <Argument Name="Timestamp" Value="2016-06-25T18:09:05Z"></Argument>
+            <Argument Name="Version" Value="2013-08-01"></Argument>
+            <Argument Name="Signature" Value="miAipThCkQrRsv7DtgKiFvR4lNtCt0SrPMghltspO3g="></Argument>
+        </Arguments>
+        <RequestProcessingTime>0.0538780000000000</RequestProcessingTime>
+    </OperationRequest>
+    <Items>
+        <Request>
+            <IsValid>True</IsValid>
+            <ItemLookupRequest>
+                <IdType>ISBN</IdType>
+                <ItemId>3570049426</ItemId>
+                <ResponseGroup>Large</ResponseGroup>
+                <SearchIndex>All</SearchIndex>
+                <VariationPage>All</VariationPage>
+            </ItemLookupRequest>
+        </Request>
+        <Item>
+            <ASIN>3570049426</ASIN>
+            <DetailPageURL>
+                http://www.amazon.de/Anton-kleine-Vampir-N-F-Weihnachten/dp/3570049426%3FSubscriptionId%3D1C40MS11Y3T9CRFXPQ82%26tag%3Dhttpwwwradika-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D3570049426
+            </DetailPageURL>
+            <ItemLinks>
+                <ItemLink>
+                    <Description>Add To Wishlist</Description>
+                    <URL>
+                        http://www.amazon.de/gp/registry/wishlist/add-item.html%3Fasin.0%3D3570049426%26SubscriptionId%3D1C40MS11Y3T9CRFXPQ82%26tag%3Dhttpwwwradika-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D12738%26creativeASIN%3D3570049426
+                    </URL>
+                </ItemLink>
+                <ItemLink>
+                    <Description>Tell A Friend</Description>
+                    <URL>
+                        http://www.amazon.de/gp/pdp/taf/3570049426%3FSubscriptionId%3D1C40MS11Y3T9CRFXPQ82%26tag%3Dhttpwwwradika-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D12738%26creativeASIN%3D3570049426
+                    </URL>
+                </ItemLink>
+                <ItemLink>
+                    <Description>All Customer Reviews</Description>
+                    <URL>
+                        http://www.amazon.de/review/product/3570049426%3FSubscriptionId%3D1C40MS11Y3T9CRFXPQ82%26tag%3Dhttpwwwradika-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D12738%26creativeASIN%3D3570049426
+                    </URL>
+                </ItemLink>
+                <ItemLink>
+                    <Description>All Offers</Description>
+                    <URL>
+                        http://www.amazon.de/gp/offer-listing/3570049426%3FSubscriptionId%3D1C40MS11Y3T9CRFXPQ82%26tag%3Dhttpwwwradika-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D12738%26creativeASIN%3D3570049426
+                    </URL>
+                </ItemLink>
+            </ItemLinks>
+            <SalesRank>914924</SalesRank>
+            <SmallImage>
+                <URL>http://ecx.images-amazon.com/images/I/51QauG1D2DL._SL75_.jpg</URL>
+                <Height Units="pixels">75</Height>
+                <Width Units="pixels">53</Width>
+            </SmallImage>
+            <MediumImage>
+                <URL>http://ecx.images-amazon.com/images/I/51QauG1D2DL._SL160_.jpg</URL>
+                <Height Units="pixels">160</Height>
+                <Width Units="pixels">112</Width>
+            </MediumImage>
+            <LargeImage>
+                <URL>http://ecx.images-amazon.com/images/I/51QauG1D2DL.jpg</URL>
+                <Height Units="pixels">500</Height>
+                <Width Units="pixels">351</Width>
+            </LargeImage>
+            <ImageSets>
+                <ImageSet Category="primary">
+                    <SwatchImage>
+                        <URL>http://ecx.images-amazon.com/images/I/51QauG1D2DL._SL30_.jpg</URL>
+                        <Height Units="pixels">30</Height>
+                        <Width Units="pixels">21</Width>
+                    </SwatchImage>
+                    <SmallImage>
+                        <URL>http://ecx.images-amazon.com/images/I/51QauG1D2DL._SL75_.jpg</URL>
+                        <Height Units="pixels">75</Height>
+                        <Width Units="pixels">53</Width>
+                    </SmallImage>
+                    <ThumbnailImage>
+                        <URL>http://ecx.images-amazon.com/images/I/51QauG1D2DL._SL75_.jpg</URL>
+                        <Height Units="pixels">75</Height>
+                        <Width Units="pixels">53</Width>
+                    </ThumbnailImage>
+                    <TinyImage>
+                        <URL>http://ecx.images-amazon.com/images/I/51QauG1D2DL._SL110_.jpg</URL>
+                        <Height Units="pixels">110</Height>
+                        <Width Units="pixels">77</Width>
+                    </TinyImage>
+                    <MediumImage>
+                        <URL>http://ecx.images-amazon.com/images/I/51QauG1D2DL._SL160_.jpg</URL>
+                        <Height Units="pixels">160</Height>
+                        <Width Units="pixels">112</Width>
+                    </MediumImage>
+                    <LargeImage>
+                        <URL>http://ecx.images-amazon.com/images/I/51QauG1D2DL.jpg</URL>
+                        <Height Units="pixels">500</Height>
+                        <Width Units="pixels">351</Width>
+                    </LargeImage>
+                </ImageSet>
+            </ImageSets>
+            <ItemAttributes>
+                <Author>Angela Sommer-Bodenburg</Author>
+                <Binding>Gebundene Ausgabe</Binding>
+                <EAN>9783570049426</EAN>
+                <EANList>
+                    <EANListElement>9783570049426</EANListElement>
+                </EANList>
+                <Edition>1.</Edition>
+                <ISBN>3570049426</ISBN>
+                <Label>C. Bertelsmann</Label>
+                <ListPrice>
+                    <Amount>990</Amount>
+                    <CurrencyCode>EUR</CurrencyCode>
+                    <FormattedPrice>EUR 9,90</FormattedPrice>
+                </ListPrice>
+                <Manufacturer>C. Bertelsmann</Manufacturer>
+                <ManufacturerMaximumAge Units="months">120</ManufacturerMaximumAge>
+                <ManufacturerMinimumAge Units="months">96</ManufacturerMinimumAge>
+                <NumberOfPages>125</NumberOfPages>
+                <PackageDimensions>
+                    <Height Units="hundredths-inches">63</Height>
+                    <Length Units="hundredths-inches">827</Length>
+                    <Weight Units="hundredths-pounds">49</Weight>
+                    <Width Units="hundredths-inches">535</Width>
+                </PackageDimensions>
+                <ProductGroup>Book</ProductGroup>
+                <ProductTypeName>ABIS_BOOK</ProductTypeName>
+                <PublicationDate>1989</PublicationDate>
+                <Publisher>C. Bertelsmann</Publisher>
+                <SKU>MAK_VRG_9783570049426</SKU>
+                <Studio>C. Bertelsmann</Studio>
+                <Title>Anton und der kleine Vampir, N.F., 7: Fröhliche Weihnachten</Title>
+            </ItemAttributes>
+            <OfferSummary>
+                <LowestUsedPrice>
+                    <Amount>94</Amount>
+                    <CurrencyCode>EUR</CurrencyCode>
+                    <FormattedPrice>EUR 0,94</FormattedPrice>
+                </LowestUsedPrice>
+                <TotalNew>0</TotalNew>
+                <TotalUsed>8</TotalUsed>
+                <TotalCollectible>0</TotalCollectible>
+                <TotalRefurbished>0</TotalRefurbished>
+            </OfferSummary>
+            <Offers>
+                <TotalOffers>0</TotalOffers>
+                <TotalOfferPages>0</TotalOfferPages>
+                <MoreOffersUrl>0</MoreOffersUrl>
+            </Offers>
+            <CustomerReviews>
+                <IFrameURL>http://www.amazon.de/reviews/iframe?akid=1C40MS11Y3T9CRFXPQ82&amp;alinkCode=xm2&amp;asin=3570049426&amp;atag=httpwwwradika-21&amp;exp=2016-06-26T18%3A09%3A05Z&amp;v=2&amp;sig=cR1BczosTRKgdBhrZIEstXXNAyXGKpqDhzzOwoVEAL8%3D</IFrameURL>
+                <HasReviews>false</HasReviews>
+            </CustomerReviews>
+            <BrowseNodes>
+                <BrowseNode>
+                    <BrowseNodeId>5452798031</BrowseNodeId>
+                    <Name>Erstes Lesealter</Name>
+                    <Ancestors>
+                        <BrowseNode>
+                            <BrowseNodeId>5452795031</BrowseNodeId>
+                            <Name>Belletristik</Name>
+                            <Ancestors>
+                                <BrowseNode>
+                                    <BrowseNodeId>5452736031</BrowseNodeId>
+                                    <Name>Kinderbücher</Name>
+                                    <Ancestors>
+                                        <BrowseNode>
+                                            <BrowseNodeId>541686</BrowseNodeId>
+                                            <Name>Kategorien</Name>
+                                            <IsCategoryRoot>1</IsCategoryRoot>
+                                            <Ancestors>
+                                                <BrowseNode>
+                                                    <BrowseNodeId>186606</BrowseNodeId>
+                                                    <Name>Bücher</Name>
+                                                </BrowseNode>
+                                            </Ancestors>
+                                        </BrowseNode>
+                                    </Ancestors>
+                                </BrowseNode>
+                            </Ancestors>
+                        </BrowseNode>
+                    </Ancestors>
+                </BrowseNode>
+                <BrowseNode>
+                    <BrowseNodeId>5452804031</BrowseNodeId>
+                    <Name>Vampire &amp; Monster</Name>
+                    <Ancestors>
+                        <BrowseNode>
+                            <BrowseNodeId>5452795031</BrowseNodeId>
+                            <Name>Belletristik</Name>
+                            <Ancestors>
+                                <BrowseNode>
+                                    <BrowseNodeId>5452736031</BrowseNodeId>
+                                    <Name>Kinderbücher</Name>
+                                    <Ancestors>
+                                        <BrowseNode>
+                                            <BrowseNodeId>541686</BrowseNodeId>
+                                            <Name>Kategorien</Name>
+                                            <IsCategoryRoot>1</IsCategoryRoot>
+                                            <Ancestors>
+                                                <BrowseNode>
+                                                    <BrowseNodeId>186606</BrowseNodeId>
+                                                    <Name>Bücher</Name>
+                                                </BrowseNode>
+                                            </Ancestors>
+                                        </BrowseNode>
+                                    </Ancestors>
+                                </BrowseNode>
+                            </Ancestors>
+                        </BrowseNode>
+                    </Ancestors>
+                </BrowseNode>
+            </BrowseNodes>
+        </Item>
+        <Item>
+            <ASIN>B00DRQD2EU</ASIN>
+            <DetailPageURL>
+                http://www.amazon.de/Anton-kleine-Vampir-H%C3%B6hle-L%C3%B6wen/dp/B00DRQD2EU%3FSubscriptionId%3D1C40MS11Y3T9CRFXPQ82%26tag%3Dhttpwwwradika-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3DB00DRQD2EU
+            </DetailPageURL>
+            <ItemLinks>
+                <ItemLink>
+                    <Description>Add To Wishlist</Description>
+                    <URL>
+                        http://www.amazon.de/gp/registry/wishlist/add-item.html%3Fasin.0%3DB00DRQD2EU%26SubscriptionId%3D1C40MS11Y3T9CRFXPQ82%26tag%3Dhttpwwwradika-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D12738%26creativeASIN%3DB00DRQD2EU
+                    </URL>
+                </ItemLink>
+                <ItemLink>
+                    <Description>Tell A Friend</Description>
+                    <URL>
+                        http://www.amazon.de/gp/pdp/taf/B00DRQD2EU%3FSubscriptionId%3D1C40MS11Y3T9CRFXPQ82%26tag%3Dhttpwwwradika-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D12738%26creativeASIN%3DB00DRQD2EU
+                    </URL>
+                </ItemLink>
+                <ItemLink>
+                    <Description>All Customer Reviews</Description>
+                    <URL>
+                        http://www.amazon.de/review/product/B00DRQD2EU%3FSubscriptionId%3D1C40MS11Y3T9CRFXPQ82%26tag%3Dhttpwwwradika-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D12738%26creativeASIN%3DB00DRQD2EU
+                    </URL>
+                </ItemLink>
+                <ItemLink>
+                    <Description>All Offers</Description>
+                    <URL>
+                        http://www.amazon.de/gp/offer-listing/B00DRQD2EU%3FSubscriptionId%3D1C40MS11Y3T9CRFXPQ82%26tag%3Dhttpwwwradika-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D12738%26creativeASIN%3DB00DRQD2EU
+                    </URL>
+                </ItemLink>
+            </ItemLinks>
+            <ItemAttributes>
+                <Author>Angela Sommer-Bodenburg</Author>
+                <Binding>Gebundene Ausgabe</Binding>
+                <EAN>9783570049426</EAN>
+                <EANList>
+                    <EANListElement>9783570049426</EANListElement>
+                </EANList>
+                <ISBN>3570049426</ISBN>
+                <Label>Bertelsmann 1989</Label>
+                <Languages>
+                    <Language>
+                        <Name>Deutsch</Name>
+                        <Type>Published</Type>
+                    </Language>
+                    <Language>
+                        <Name>Deutsch</Name>
+                        <Type>Unbekannt</Type>
+                    </Language>
+                </Languages>
+                <Manufacturer>Bertelsmann 1989</Manufacturer>
+                <ProductGroup>Book</ProductGroup>
+                <ProductTypeName>BOOKS_1973_AND_LATER</ProductTypeName>
+                <PublicationDate>1989</PublicationDate>
+                <Publisher>Bertelsmann 1989</Publisher>
+                <Studio>Bertelsmann 1989</Studio>
+                <Title>Anton und der kleine Vampir - In der Höhle des Löwen</Title>
+            </ItemAttributes>
+            <OfferSummary>
+                <TotalNew>0</TotalNew>
+                <TotalUsed>0</TotalUsed>
+                <TotalCollectible>0</TotalCollectible>
+                <TotalRefurbished>0</TotalRefurbished>
+            </OfferSummary>
+            <Offers>
+                <TotalOffers>0</TotalOffers>
+                <TotalOfferPages>0</TotalOfferPages>
+                <MoreOffersUrl>0</MoreOffersUrl>
+            </Offers>
+            <CustomerReviews>
+                <IFrameURL>http://www.amazon.de/reviews/iframe?akid=1C40MS11Y3T9CRFXPQ82&amp;alinkCode=xm2&amp;asin=B00DRQD2EU&amp;atag=httpwwwradika-21&amp;exp=2016-06-26T18%3A09%3A05Z&amp;v=2&amp;sig=yJOa7tddAi%2FYXEKkeGt%2BjfT088wz8bNDUAkmIaUYYWc%3D</IFrameURL>
+                <HasReviews>false</HasReviews>
+            </CustomerReviews>
+            <EditorialReviews>
+                <EditorialReview>
+                    <Source>Product Description</Source>
+                    <Content>125 Seiten, opbd Illustrationen von Magdalene Hanke-Basfeld, guter Zustand</Content>
+                    <IsLinkSuppressed>0</IsLinkSuppressed>
+                </EditorialReview>
+            </EditorialReviews>
+            <BrowseNodes>
+                <BrowseNode>
+                    <BrowseNodeId>541686</BrowseNodeId>
+                    <Name>Kategorien</Name>
+                    <IsCategoryRoot>1</IsCategoryRoot>
+                    <Children>
+                        <BrowseNode>
+                            <BrowseNodeId>117</BrowseNodeId>
+                            <Name>Belletristik</Name>
+                        </BrowseNode>
+                        <BrowseNode>
+                            <BrowseNodeId>187254</BrowseNodeId>
+                            <Name>Biografien &amp; Erinnerungen</Name>
+                        </BrowseNode>
+                        <BrowseNode>
+                            <BrowseNodeId>403434</BrowseNodeId>
+                            <Name>Business &amp; Karriere</Name>
+                        </BrowseNode>
+                        <BrowseNode>
+                            <BrowseNodeId>120</BrowseNodeId>
+                            <Name>Börse &amp; Geld</Name>
+                        </BrowseNode>
+                        <BrowseNode>
+                            <BrowseNodeId>287621</BrowseNodeId>
+                            <Name>Comics &amp; Mangas</Name>
+                        </BrowseNode>
+                        <BrowseNode>
+                            <BrowseNodeId>124</BrowseNodeId>
+                            <Name>Computer &amp; Internet</Name>
+                        </BrowseNode>
+                        <BrowseNode>
+                            <BrowseNodeId>11063821</BrowseNodeId>
+                            <Name>Erotik</Name>
+                        </BrowseNode>
+                        <BrowseNode>
+                            <BrowseNodeId>340583031</BrowseNodeId>
+                            <Name>Esoterik</Name>
+                        </BrowseNode>
+                        <BrowseNode>
+                            <BrowseNodeId>288100</BrowseNodeId>
+                            <Name>Fachbücher</Name>
+                        </BrowseNode>
+                        <BrowseNode>
+                            <BrowseNodeId>142</BrowseNodeId>
+                            <Name>Fantasy &amp; Science Fiction</Name>
+                        </BrowseNode>
+                        <BrowseNode>
+                            <BrowseNodeId>548400</BrowseNodeId>
+                            <Name>Film, Kunst &amp; Kultur</Name>
+                        </BrowseNode>
+                        <BrowseNode>
+                            <BrowseNodeId>122</BrowseNodeId>
+                            <Name>Freizeit, Haus &amp; Garten</Name>
+                        </BrowseNode>
+                        <BrowseNode>
+                            <BrowseNodeId>13690631</BrowseNodeId>
+                            <Name>Geschenkbücher</Name>
+                        </BrowseNode>
+                        <BrowseNode>
+                            <BrowseNodeId>419943031</BrowseNodeId>
+                            <Name>Horror</Name>
+                        </BrowseNode>
+                        <BrowseNode>
+                            <BrowseNodeId>5452843031</BrowseNodeId>
+                            <Name>Jugendbücher</Name>
+                        </BrowseNode>
+                        <BrowseNode>
+                            <BrowseNodeId>118310011</BrowseNodeId>
+                            <Name>Kalender</Name>
+                        </BrowseNode>
+                        <BrowseNode>
+                            <BrowseNodeId>5452736031</BrowseNodeId>
+                            <Name>Kinderbücher</Name>
+                        </BrowseNode>
+                        <BrowseNode>
+                            <BrowseNodeId>189528</BrowseNodeId>
+                            <Name>Kochen &amp; Genießen</Name>
+                        </BrowseNode>
+                        <BrowseNode>
+                            <BrowseNodeId>287480</BrowseNodeId>
+                            <Name>Krimis &amp; Thriller</Name>
+                        </BrowseNode>
+                        <BrowseNode>
+                            <BrowseNodeId>1199902</BrowseNodeId>
+                            <Name>Musiknoten</Name>
+                        </BrowseNode>
+                        <BrowseNode>
+                            <BrowseNodeId>121</BrowseNodeId>
+                            <Name>Naturwissenschaften &amp; Technik</Name>
+                        </BrowseNode>
+                        <BrowseNode>
+                            <BrowseNodeId>143</BrowseNodeId>
+                            <Name>Politik &amp; Geschichte</Name>
+                        </BrowseNode>
+                        <BrowseNode>
+                            <BrowseNodeId>536302</BrowseNodeId>
+                            <Name>Ratgeber</Name>
+                        </BrowseNode>
+                        <BrowseNode>
+                            <BrowseNodeId>298002</BrowseNodeId>
+                            <Name>Reise &amp; Abenteuer</Name>
+                        </BrowseNode>
+                        <BrowseNode>
+                            <BrowseNodeId>340513031</BrowseNodeId>
+                            <Name>Religion &amp; Glaube</Name>
+                        </BrowseNode>
+                        <BrowseNode>
+                            <BrowseNodeId>403432</BrowseNodeId>
+                            <Name>Schule &amp; Lernen</Name>
+                        </BrowseNode>
+                        <BrowseNode>
+                            <BrowseNodeId>298338</BrowseNodeId>
+                            <Name>Sport &amp; Fitness</Name>
+                        </BrowseNode>
+                    </Children>
+                    <Ancestors>
+                        <BrowseNode>
+                            <BrowseNodeId>186606</BrowseNodeId>
+                            <Name>Bücher</Name>
+                        </BrowseNode>
+                    </Ancestors>
+                </BrowseNode>
+            </BrowseNodes>
+        </Item>
+    </Items>
+</ItemLookupResponse>
