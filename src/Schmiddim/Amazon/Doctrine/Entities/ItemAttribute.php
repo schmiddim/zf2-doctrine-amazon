@@ -32,6 +32,20 @@ class ItemAttribute
     protected $value;
 
     /**
+     * @var ItemAttribute[]
+     * @ORM\OneToMany(targetEntity="ItemAttribute" ,mappedBy="parentAttribute",cascade={"persist", "remove"}))
+
+     */
+    protected $childAttributes;
+
+    /**
+     * @var ItemAttribute
+     * @ORM\ManyToOne(targetEntity="ItemAttribute", inversedBy="childAttributes")
+     * @ORM\JoinColumn(referencedColumnName="id", name="parent_id")
+     */
+    protected $parentAttribute;
+
+    /**
      * @return mixed
      */
     public function getId()
@@ -94,6 +108,41 @@ class ItemAttribute
     {
         $this->value = $value;
     }
+
+    /**
+     * @return ItemAttribute
+     */
+    public function getChildAttributes()
+    {
+        return $this->childAttributes;
+    }
+
+    /**
+     * @param ItemAttribute[] $childAttributes
+     */
+    public function setChildAttributes($childAttributes)
+    {
+
+        $this->childAttributes = $childAttributes;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getParentAttribute()
+    {
+        return $this->parentAttribute;
+    }
+
+    /**
+     * @param mixed $parentAttribute
+     */
+    public function setParentAttribute($parentAttribute)
+    {
+        $this->parentAttribute = $parentAttribute;
+    }
+
+
 
 
 

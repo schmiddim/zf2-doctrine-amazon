@@ -161,18 +161,53 @@ class Product
         //@todo price
 
         $itemAttributeVars = get_object_vars($element->ItemAttributes);
-        foreach($itemAttributeVars as $name => $value) {
-            if(false == is_array($value)) {
+        foreach ($itemAttributeVars as $name => $value) {
+              if ($value instanceof \SimpleXMLElement) {
                 $itemAttributeEntity = new ItemAttribute();
                 $itemAttributeEntity->setName($name);
-                $itemAttributeEntity->setValue($value);
-                $this->addItemAttribute($itemAttributeEntity);
+                $itemAttributeEntity->setValue('NESTED');
+                $childAttributes = $this->generateChildAttributes($value);
+                foreach ($childAttributes as $childAttribute) {
+                    $childAttribute->setParentAttribute($itemAttributeEntity);
+                }
+                $itemAttributeEntity->setChildAttributes($childAttributes);
+            } else {
+                $itemAttributeEntity = new ItemAttribute();
+                $itemAttributeEntity->setName($name);
+                $itemAttributeEntity->setValue(strval($value));
             }
+            $this->addItemAttribute($itemAttributeEntity);
         }
     }
 
-
+    /**
+     * For the xml thing - created the nested attribute structure
+     * @param array $attributes
+     * @return ItemAttribute[]
+     */
+    protected function generateChildAttributes($attributes = array())
+    {
+        $itemAttributeEntities = array();
+        foreach ($attributes as $name => $value) {
+            if ($value instanceof \SimpleXMLElement) {
+                $itemAttributeEntity = new ItemAttribute();
+                $itemAttributeEntity->setName($name);
+                $itemAttributeEntity->setValue('NESTED');
+                $childAttributes = $this->generateChildAttributes($value);
+                foreach ($childAttributes as $childAttribute) {
+                    $childAttribute->setParentAttribute($itemAttributeEntity);
+                }
+                $itemAttributeEntity->setChildAttributes($childAttributes);
+            } else {
+                $itemAttributeEntity = new ItemAttribute();
+                $itemAttributeEntity->setName($name);
+                $itemAttributeEntity->setValue(strval($value));
+            }
+        }
+        return $itemAttributeEntities;
+    }
     /******automatic generated GETTERS + SETTERS *******************/
+
 
     /**
      * @return mixed
