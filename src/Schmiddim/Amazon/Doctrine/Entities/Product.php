@@ -162,7 +162,7 @@ class Product
 
         $itemAttributeVars = get_object_vars($element->ItemAttributes);
         foreach ($itemAttributeVars as $name => $value) {
-              if ($value instanceof \SimpleXMLElement) {
+            if ($value instanceof \SimpleXMLElement || is_array($value)) {
                 $itemAttributeEntity = new ItemAttribute();
                 $itemAttributeEntity->setName($name);
                 $itemAttributeEntity->setValue('NESTED');
@@ -174,6 +174,9 @@ class Product
             } else {
                 $itemAttributeEntity = new ItemAttribute();
                 $itemAttributeEntity->setName($name);
+                if (is_array($value)) {
+                    $be = true;
+                }
                 $itemAttributeEntity->setValue(strval($value));
             }
             $this->addItemAttribute($itemAttributeEntity);
@@ -189,20 +192,12 @@ class Product
     {
         $itemAttributeEntities = array();
         foreach ($attributes as $name => $value) {
-            if ($value instanceof \SimpleXMLElement) {
-                $itemAttributeEntity = new ItemAttribute();
-                $itemAttributeEntity->setName($name);
-                $itemAttributeEntity->setValue('NESTED');
-                $childAttributes = $this->generateChildAttributes($value);
-                foreach ($childAttributes as $childAttribute) {
-                    $childAttribute->setParentAttribute($itemAttributeEntity);
-                }
-                $itemAttributeEntity->setChildAttributes($childAttributes);
-            } else {
-                $itemAttributeEntity = new ItemAttribute();
-                $itemAttributeEntity->setName($name);
-                $itemAttributeEntity->setValue(strval($value));
-            }
+
+            $itemAttributeEntity = new ItemAttribute();
+            $itemAttributeEntity->setName($name);
+            $itemAttributeEntity->setValue(strval($value));
+
+            $itemAttributeEntities[] = $itemAttributeEntity;
         }
         return $itemAttributeEntities;
     }
