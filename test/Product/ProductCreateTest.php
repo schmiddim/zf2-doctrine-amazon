@@ -49,6 +49,21 @@ class ProductCreateTest extends \PHPUnit_Framework_TestCase
         return $product;
     }
 
+    /**
+     * @return Product
+     */
+    protected function getFixtureBookB()
+    {
+        $config = $this->serviceManager->get('ApplicationConfig');
+        $fixtures = $config['productTesting']['fixtures'];
+
+        //lords of salem     $fixtures['B00KY20LL2']
+        $product = new Product();
+        $xml = simplexml_load_file($fixtures['B004UMNUE2']);
+        $product->setByResponseObject($xml->Items->Item);
+        return $product;
+    }
+
     public function testCreateProductByXml()
     {
 
@@ -85,7 +100,22 @@ class ProductCreateTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals('ISBN', $product->hasIdentifier('3570049426'));
         $this->assertEquals('EAN', $product->hasIdentifier('9783570049426'));
 
+
+        $product = $this->getFixtureBookB();
+        $this->assertEquals('EISBN', $product->hasIdentifier('9783862951796'));
+        $this->assertEquals('ASIN', $product->hasIdentifier('B004UMNUE2'));
+
         //@todo find product where ASIN !== isbn
         //@todo EAN LIST
+    }
+
+    public function testGetIdentifiers()
+    {
+        $product= $this->getFixtureBookA();
+        $this->assertCount(5, $product->getIdentifiers());
+
+        $product= $this->getFixtureBookB();
+        $this->assertCount(2, $product->getIdentifiers());
+
     }
 }

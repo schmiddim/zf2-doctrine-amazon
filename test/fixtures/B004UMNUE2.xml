@@ -1,0 +1,288 @@
+<?xml version="1.0" ?>
+<ItemLookupResponse xmlns="http://webservices.amazon.com/AWSECommerceService/2013-08-01">
+    <OperationRequest>
+        <HTTPHeaders>
+            <Header Name="UserAgent" Value="ApaiIO [2.0.0-DEV]"></Header>
+        </HTTPHeaders>
+        <RequestId>b869beeb-dce9-43e2-ae86-968bac8b7b15</RequestId>
+        <Arguments>
+            <Argument Name="AWSAccessKeyId" Value="1C40MS11Y3T9CRFXPQ82"></Argument>
+            <Argument Name="AssociateTag" Value="httpwwwradika-21"></Argument>
+            <Argument Name="IdType" Value="ASIN"></Argument>
+            <Argument Name="ItemId" Value="B004UMNUE2"></Argument>
+            <Argument Name="Operation" Value="ItemLookup"></Argument>
+            <Argument Name="ResponseGroup" Value="Large"></Argument>
+            <Argument Name="Service" Value="AWSECommerceService"></Argument>
+            <Argument Name="Timestamp" Value="2016-06-26T17:02:24Z"></Argument>
+            <Argument Name="Version" Value="2013-08-01"></Argument>
+            <Argument Name="Signature" Value="yo15nLUTzHfY1oIimXNQB/q4HsQfe0Vr/f91902UE8E="></Argument>
+        </Arguments>
+        <RequestProcessingTime>0.0416544410000000</RequestProcessingTime>
+    </OperationRequest>
+    <Items>
+        <Request>
+            <IsValid>True</IsValid>
+            <ItemLookupRequest>
+                <IdType>ASIN</IdType>
+                <ItemId>B004UMNUE2</ItemId>
+                <ResponseGroup>Large</ResponseGroup>
+                <VariationPage>All</VariationPage>
+            </ItemLookupRequest>
+        </Request>
+        <Item>
+            <ASIN>B004UMNUE2</ASIN>
+            <DetailPageURL>
+                http://www.amazon.de/Ein-Wochenende-mit-Boss-Baccara-ebook/dp/B004UMNUE2%3FSubscriptionId%3D1C40MS11Y3T9CRFXPQ82%26tag%3Dhttpwwwradika-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3DB004UMNUE2
+            </DetailPageURL>
+            <ItemLinks>
+                <ItemLink>
+                    <Description>Add To Wishlist</Description>
+                    <URL>
+                        http://www.amazon.de/gp/registry/wishlist/add-item.html%3Fasin.0%3DB004UMNUE2%26SubscriptionId%3D1C40MS11Y3T9CRFXPQ82%26tag%3Dhttpwwwradika-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D12738%26creativeASIN%3DB004UMNUE2
+                    </URL>
+                </ItemLink>
+                <ItemLink>
+                    <Description>Tell A Friend</Description>
+                    <URL>
+                        http://www.amazon.de/gp/pdp/taf/B004UMNUE2%3FSubscriptionId%3D1C40MS11Y3T9CRFXPQ82%26tag%3Dhttpwwwradika-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D12738%26creativeASIN%3DB004UMNUE2
+                    </URL>
+                </ItemLink>
+                <ItemLink>
+                    <Description>All Customer Reviews</Description>
+                    <URL>
+                        http://www.amazon.de/review/product/B004UMNUE2%3FSubscriptionId%3D1C40MS11Y3T9CRFXPQ82%26tag%3Dhttpwwwradika-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D12738%26creativeASIN%3DB004UMNUE2
+                    </URL>
+                </ItemLink>
+                <ItemLink>
+                    <Description>All Offers</Description>
+                    <URL>
+                        http://www.amazon.de/gp/offer-listing/B004UMNUE2%3FSubscriptionId%3D1C40MS11Y3T9CRFXPQ82%26tag%3Dhttpwwwradika-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D12738%26creativeASIN%3DB004UMNUE2
+                    </URL>
+                </ItemLink>
+            </ItemLinks>
+            <SalesRank>94926</SalesRank>
+            <SmallImage>
+                <URL>http://ecx.images-amazon.com/images/I/51GmmNCzE-L._SL75_.jpg</URL>
+                <Height Units="pixels">75</Height>
+                <Width Units="pixels">51</Width>
+            </SmallImage>
+            <MediumImage>
+                <URL>http://ecx.images-amazon.com/images/I/51GmmNCzE-L._SL160_.jpg</URL>
+                <Height Units="pixels">160</Height>
+                <Width Units="pixels">110</Width>
+            </MediumImage>
+            <LargeImage>
+                <URL>http://ecx.images-amazon.com/images/I/51GmmNCzE-L.jpg</URL>
+                <Height Units="pixels">500</Height>
+                <Width Units="pixels">343</Width>
+            </LargeImage>
+            <ImageSets>
+                <ImageSet Category="primary">
+                    <SwatchImage>
+                        <URL>http://ecx.images-amazon.com/images/I/51GmmNCzE-L._SL30_.jpg</URL>
+                        <Height Units="pixels">30</Height>
+                        <Width Units="pixels">21</Width>
+                    </SwatchImage>
+                    <SmallImage>
+                        <URL>http://ecx.images-amazon.com/images/I/51GmmNCzE-L._SL75_.jpg</URL>
+                        <Height Units="pixels">75</Height>
+                        <Width Units="pixels">51</Width>
+                    </SmallImage>
+                    <ThumbnailImage>
+                        <URL>http://ecx.images-amazon.com/images/I/51GmmNCzE-L._SL75_.jpg</URL>
+                        <Height Units="pixels">75</Height>
+                        <Width Units="pixels">51</Width>
+                    </ThumbnailImage>
+                    <TinyImage>
+                        <URL>http://ecx.images-amazon.com/images/I/51GmmNCzE-L._SL110_.jpg</URL>
+                        <Height Units="pixels">110</Height>
+                        <Width Units="pixels">75</Width>
+                    </TinyImage>
+                    <MediumImage>
+                        <URL>http://ecx.images-amazon.com/images/I/51GmmNCzE-L._SL160_.jpg</URL>
+                        <Height Units="pixels">160</Height>
+                        <Width Units="pixels">110</Width>
+                    </MediumImage>
+                    <LargeImage>
+                        <URL>http://ecx.images-amazon.com/images/I/51GmmNCzE-L.jpg</URL>
+                        <Height Units="pixels">500</Height>
+                        <Width Units="pixels">343</Width>
+                    </LargeImage>
+                    <HiResImage>
+                        <URL>http://ecx.images-amazon.com/images/I/81xbnjwe-JL.jpg</URL>
+                        <Height Units="pixels">1400</Height>
+                        <Width Units="pixels">961</Width>
+                    </HiResImage>
+                </ImageSet>
+            </ImageSets>
+            <ItemAttributes>
+                <Author>YVONNE LINDSAY</Author>
+                <Binding>Kindle Edition</Binding>
+                <EISBN>9783862951796</EISBN>
+                <Format>Kindle eBook</Format>
+                <Label>CORA Verlag GmbH &amp; Co. KG</Label>
+                <Languages>
+                    <Language>
+                        <Name>Deutsch</Name>
+                        <Type>Published</Type>
+                    </Language>
+                </Languages>
+                <Manufacturer>CORA Verlag GmbH &amp; Co. KG</Manufacturer>
+                <NumberOfPages>134</NumberOfPages>
+                <ProductGroup>eBooks</ProductGroup>
+                <ProductTypeName>ABIS_EBOOKS</ProductTypeName>
+                <PublicationDate>2010-01-16</PublicationDate>
+                <Publisher>CORA Verlag GmbH &amp; Co. KG</Publisher>
+                <ReleaseDate>2011-02-17</ReleaseDate>
+                <Studio>CORA Verlag GmbH &amp; Co. KG</Studio>
+                <Title>Ein Wochenende mit dem Boss? (Baccara 4)</Title>
+            </ItemAttributes>
+            <CustomerReviews>
+                <IFrameURL>http://www.amazon.de/reviews/iframe?akid=1C40MS11Y3T9CRFXPQ82&amp;alinkCode=xm2&amp;asin=B004UMNUE2&amp;atag=httpwwwradika-21&amp;exp=2016-06-27T17%3A02%3A24Z&amp;v=2&amp;sig=lPlaKaPwRekrklqmsmXOlOdmOXC5Feukyd12b0UOt0E%3D</IFrameURL>
+                <HasReviews>false</HasReviews>
+            </CustomerReviews>
+            <EditorialReviews>
+                <EditorialReview>
+                    <Source>Kurzbeschreibung</Source>
+                    <Content>Ihr Anblick ist zum Niederknien. Wie ein sinnlicher Traum rauscht sie im roten Abendkleid
+                        an den Spieltischen des Casinos vorbei. Fasziniert beobachtet Adam die Femme fatale und malt
+                        sich aus, sie sanft zu verführen … Moment. Lainey?! Er kann es kaum glauben. In dem sexy Outfit
+                        hätte er seine sonst so zurückhaltende Assistentin fast nicht wiedererkannt. Führt sie ein
+                        Doppelleben? Warum versteht sie sich so gut mit diesem zwielichtigen Lee Ling? Adam beschließt,
+                        es herauszufinden, und lädt Lainey auf seine Jacht ein. Die Wochenendreise ist natürlich rein
+                        geschäftlich …
+                    </Content>
+                    <IsLinkSuppressed>0</IsLinkSuppressed>
+                </EditorialReview>
+            </EditorialReviews>
+            <SimilarProducts>
+                <SimilarProduct>
+                    <ASIN>B004UMNJSY</ASIN>
+                    <Title>Geliebter auf Zeit? (Baccara 1488)</Title>
+                </SimilarProduct>
+                <SimilarProduct>
+                    <ASIN>B006FYLI2O</ASIN>
+                    <Title>Sinnliche Küsse unterm Mistelzweig (Baccara 1480)</Title>
+                </SimilarProduct>
+                <SimilarProduct>
+                    <ASIN>B004UMMO5I</ASIN>
+                    <Title>Verliebt in den Chef? (BACCARA 1612)</Title>
+                </SimilarProduct>
+                <SimilarProduct>
+                    <ASIN>B004UMNJR0</ASIN>
+                    <Title>Dieses unwiderstehliche Verlangen</Title>
+                </SimilarProduct>
+                <SimilarProduct>
+                    <ASIN>B0097D7K2C</ASIN>
+                    <Title>Schicksalhaftes Wiedersehen in Neuseeland</Title>
+                </SimilarProduct>
+            </SimilarProducts>
+            <BrowseNodes>
+                <BrowseNode>
+                    <BrowseNodeId>420222031</BrowseNodeId>
+                    <Name>Liebesromane</Name>
+                    <Ancestors>
+                        <BrowseNode>
+                            <BrowseNodeId>117</BrowseNodeId>
+                            <Name>Belletristik</Name>
+                            <Ancestors>
+                                <BrowseNode>
+                                    <BrowseNodeId>541686</BrowseNodeId>
+                                    <Name>Kategorien</Name>
+                                    <IsCategoryRoot>1</IsCategoryRoot>
+                                    <Ancestors>
+                                        <BrowseNode>
+                                            <BrowseNodeId>186606</BrowseNodeId>
+                                            <Name>Bücher</Name>
+                                        </BrowseNode>
+                                    </Ancestors>
+                                </BrowseNode>
+                            </Ancestors>
+                        </BrowseNode>
+                    </Ancestors>
+                </BrowseNode>
+                <BrowseNode>
+                    <BrowseNodeId>610659031</BrowseNodeId>
+                    <Name>Liebesromane</Name>
+                    <Children>
+                        <BrowseNode>
+                            <BrowseNodeId>6692398031</BrowseNodeId>
+                            <Name>Fantasy</Name>
+                        </BrowseNode>
+                        <BrowseNode>
+                            <BrowseNodeId>6692402031</BrowseNodeId>
+                            <Name>Historische Romantik</Name>
+                        </BrowseNode>
+                        <BrowseNode>
+                            <BrowseNodeId>6692421031</BrowseNodeId>
+                            <Name>Junge Erwachsene</Name>
+                        </BrowseNode>
+                        <BrowseNode>
+                            <BrowseNodeId>6692415031</BrowseNodeId>
+                            <Name>Lesbenromantik</Name>
+                        </BrowseNode>
+                        <BrowseNode>
+                            <BrowseNodeId>6692416031</BrowseNodeId>
+                            <Name>Militärromantik</Name>
+                        </BrowseNode>
+                        <BrowseNode>
+                            <BrowseNodeId>6692418031</BrowseNodeId>
+                            <Name>Mystery &amp; Spannung</Name>
+                        </BrowseNode>
+                        <BrowseNode>
+                            <BrowseNodeId>6692431031</BrowseNodeId>
+                            <Name>Romantische Komödie</Name>
+                        </BrowseNode>
+                        <BrowseNode>
+                            <BrowseNodeId>6692399031</BrowseNodeId>
+                            <Name>Romantische Literatur für Homosexuelle</Name>
+                        </BrowseNode>
+                        <BrowseNode>
+                            <BrowseNodeId>6692396031</BrowseNodeId>
+                            <Name>Sammlungen &amp; Anthologien</Name>
+                        </BrowseNode>
+                        <BrowseNode>
+                            <BrowseNodeId>6692432031</BrowseNodeId>
+                            <Name>Science Fiction</Name>
+                        </BrowseNode>
+                        <BrowseNode>
+                            <BrowseNodeId>6692435031</BrowseNodeId>
+                            <Name>Western</Name>
+                        </BrowseNode>
+                        <BrowseNode>
+                            <BrowseNodeId>6692397031</BrowseNodeId>
+                            <Name>Zeitgenössisch</Name>
+                        </BrowseNode>
+                        <BrowseNode>
+                            <BrowseNodeId>6692434031</BrowseNodeId>
+                            <Name>Zeitreisen</Name>
+                        </BrowseNode>
+                        <BrowseNode>
+                            <BrowseNodeId>6692422031</BrowseNodeId>
+                            <Name>Übersinnliches</Name>
+                        </BrowseNode>
+                    </Children>
+                    <Ancestors>
+                        <BrowseNode>
+                            <BrowseNodeId>530886031</BrowseNodeId>
+                            <Name>Kindle eBooks</Name>
+                            <Ancestors>
+                                <BrowseNode>
+                                    <BrowseNodeId>530485031</BrowseNodeId>
+                                    <Name>Kategorien</Name>
+                                    <IsCategoryRoot>1</IsCategoryRoot>
+                                    <Ancestors>
+                                        <BrowseNode>
+                                            <BrowseNodeId>530484031</BrowseNodeId>
+                                            <Name>Kindle-Shop</Name>
+                                        </BrowseNode>
+                                    </Ancestors>
+                                </BrowseNode>
+                            </Ancestors>
+                        </BrowseNode>
+                    </Ancestors>
+                </BrowseNode>
+            </BrowseNodes>
+        </Item>
+    </Items>
+</ItemLookupResponse>

@@ -110,7 +110,7 @@ class ItemAttribute
     }
 
     /**
-     * @return ItemAttribute
+     * @return ItemAttribute[]
      */
     public function getChildAttributes()
     {

@@ -212,19 +212,48 @@ class Product
                     if ($attribute->getValue() === $identifier) {
                         return $attribute->getName();
                     }
-                continue;
+                    continue;
                 case 'ISBN':
                     if ($attribute->getValue() === $identifier) {
                         return $attribute->getName();
                     }
-              continue;
+                    continue;
+                case 'EISBN':
+                    if ($attribute->getValue() === $identifier) {
+                        return $attribute->getName();
+                    }
+                    continue;
             }
 
         }
-        if($this->getAsin() === $identifier) {
+        if ($this->getAsin() === $identifier) {
             return 'ASIN';
         }
         return false;
+    }
+
+
+    public function getIdentifiers()
+    {
+        $identifiers = array();
+        $identifiers[] = $this->getAsin();
+        foreach ($this->itemAttributes as $attribute) {
+
+            if (in_array($attribute->getName(), ['EAN', 'ISBN', 'EISBN'])) {
+                $identifiers[] = $attribute->getValue();
+            }
+
+            if ('EANList' === $attribute->getName()) {
+                foreach ($attribute->getChildAttributes() as $childAttribute) {
+                    $identifiers[] = $childAttribute->getValue();
+
+                }
+                $identifiers[] = $attribute->getValue();
+            }
+
+        }
+        return $identifiers;
+
     }
     /******automatic generated GETTERS + SETTERS *******************/
 
@@ -306,7 +335,7 @@ class Product
      */
     public function setDetailPageUrl($detailPageUrl)
     {
-        $this->detailPageUrl = trim( $detailPageUrl);
+        $this->detailPageUrl = trim($detailPageUrl);
     }
 
     /**
