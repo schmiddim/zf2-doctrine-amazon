@@ -1,6 +1,6 @@
 <?php
 
-namespace ApaiIOTest;
+namespace AmazonDoctrine;
 
 use Zend\Di\ServiceLocator;
 use Zend\Loader\AutoloaderFactory;
@@ -60,6 +60,9 @@ class Bootstrap
         static::$config = $config;
     }
 
+    /**
+     * @return ServiceManager
+     */
     public static function getServiceManager()
     {
         return static::$serviceManager;

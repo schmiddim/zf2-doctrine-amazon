@@ -21,6 +21,13 @@ return array(
         'AWS_ASSOCIATE_TAG' => '<your tag>',
     )
 ,
+    'productTesting' => array(
+        'fixtures' => array(
+            '3570049426'=>  'fixtures/3570049426.xml',
+            'B00KY20LL2'=> 'fixtures/B00KY20LL2.xml'
+        )
+
+    )
 
 
 );
