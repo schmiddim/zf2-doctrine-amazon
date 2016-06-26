@@ -306,7 +306,7 @@ class Product
      */
     public function setDetailPageUrl($detailPageUrl)
     {
-        $this->detailPageUrl = $detailPageUrl;
+        $this->detailPageUrl = trim( $detailPageUrl);
     }
 
     /**
