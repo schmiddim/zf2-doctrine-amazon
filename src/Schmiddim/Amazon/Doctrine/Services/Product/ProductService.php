@@ -31,7 +31,6 @@ class ProductService extends AbstractEntityService implements ProductServiceInte
         return $product;
     }
 
-
     public function existsProductByAsin($asin)
     {
         if (null !== $this->getProductByAsin($asin)) {

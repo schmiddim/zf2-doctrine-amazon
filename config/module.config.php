@@ -9,6 +9,10 @@ use Schmiddim\Amazon\Doctrine\Services\Wishlist\WishlistServiceInterface;
 use Schmiddim\Amazon\Doctrine\Factories\WishlistServiceFactory;
 use Schmiddim\Amazon\Doctrine\Services\ItemNotFound\ItemNotFoundServiceInterface;
 use Schmiddim\Amazon\Doctrine\Factories\ItemNotFoundFactory;
+use Schmiddim\Amazon\Doctrine\Factories\ItemAttributeFactory;
+
+use Schmiddim\Amazon\Doctrine\Services\ItemAttribute\ItemAttributeServiceInterface;
+
 return array(
     'controllers' => array(
         'factories' => array(
@@ -21,7 +25,8 @@ return array(
         'factories' => array(
             ProductServiceInterface::class => ProductServiceFactory::class,
             WishlistServiceInterface::class => WishlistServiceFactory::class,
-          ItemNotFoundServiceInterface::class => ItemNotFoundFactory::class
+            ItemNotFoundServiceInterface::class => ItemNotFoundFactory::class,
+            ItemAttributeServiceInterface::class => ItemAttributeFactory::class
         ),
     ),
 
