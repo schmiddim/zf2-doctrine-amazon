@@ -75,7 +75,7 @@ class Product
 
     /**
      * @var ItemAttribute[]
-     * @ORM\ManyToMany(targetEntity="ItemAttribute", cascade={"persist", "remove"})
+     * @ORM\OneToMany(targetEntity="ItemAttribute", mappedBy="Product", cascade={"persist", "remove"})
      */
     protected $itemAttributes = array();
 
@@ -169,6 +169,7 @@ class Product
                 $childAttributes = $this->generateChildAttributes($value);
                 foreach ($childAttributes as $childAttribute) {
                     $childAttribute->setParentAttribute($itemAttributeEntity);
+                    $childAttribute->setProduct($this);
                 }
                 $itemAttributeEntity->setChildAttributes($childAttributes);
             } else {
@@ -479,6 +480,9 @@ class Product
      */
     public function setItemAttributes($itemAttributes)
     {
+        foreach ($itemAttributes as $itemAttribute) {
+            $itemAttribute->setProduct($this);
+        }
         $this->itemAttributes = $itemAttributes;
     }
 
@@ -489,6 +493,7 @@ class Product
      */
     public function addItemAttribute(ItemAttribute $itemAttribute)
     {
+        $itemAttribute->setProduct($this);
         $this->itemAttributes[] = $itemAttribute;
     }
 

@@ -34,7 +34,6 @@ class ItemAttribute
     /**
      * @var ItemAttribute[]
      * @ORM\OneToMany(targetEntity="ItemAttribute" ,mappedBy="parentAttribute",cascade={"persist", "remove"}))
-
      */
     protected $childAttributes;
 
@@ -44,6 +43,13 @@ class ItemAttribute
      * @ORM\JoinColumn(referencedColumnName="id", name="parent_id")
      */
     protected $parentAttribute;
+
+    /**
+     * @var Product
+     * @ORM\ManyToOne(targetEntity="Product", inversedBy="ItemAttributes")
+     * @ORM\JoinColumn(name="product_id", referencedColumnName="id")
+     */
+    protected $product;
 
     /**
      * @return mixed
@@ -142,8 +148,21 @@ class ItemAttribute
         $this->parentAttribute = $parentAttribute;
     }
 
+    /**
+     * @return Product
+     */
+    public function getProduct()
+    {
+        return $this->product;
+    }
 
-
+    /**
+     * @param Product $product
+     */
+    public function setProduct($product)
+    {
+        $this->product = $product;
+    }
 
 
 }
