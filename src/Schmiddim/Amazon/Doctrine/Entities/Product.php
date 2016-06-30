@@ -75,7 +75,7 @@ class Product
 
     /**
      * @var ItemAttribute[]
-     * @ORM\OneToMany(targetEntity="ItemAttribute", mappedBy="Product", cascade={"persist", "remove"})
+     * @ORM\OneToMany(targetEntity="ItemAttribute", mappedBy="product", cascade={"persist", "remove"})
      */
     protected $itemAttributes = array();
 
