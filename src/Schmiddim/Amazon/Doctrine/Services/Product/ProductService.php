@@ -11,6 +11,7 @@ use Schmiddim\Amazon\Doctrine\Entities\Product;
 use Schmiddim\Amazon\Doctrine\Entities\Image;
 use Schmiddim\Amazon\Doctrine\Entities\Price;
 use Schmiddim\Amazon\Doctrine\Entities\Offer;
+
 class ProductService extends AbstractEntityService implements ProductServiceInterface
 {
 
@@ -38,6 +39,7 @@ class ProductService extends AbstractEntityService implements ProductServiceInte
         }
         return false;
     }
+
     /**
      * @param \SimpleXMLElement $xmlObject
      * @throws \Exception
@@ -83,21 +85,20 @@ class ProductService extends AbstractEntityService implements ProductServiceInte
 
         //Price
         $listPrice = new Price();
-        $listPrice->setByResponseObject($itemDetails->ItemAttributes->ListPrice);
-        $product->setListPrice($listPrice);
+        if ($itemDetails->ItemAttributes->ListPric !== null) {
+            $listPrice->setByResponseObject($itemDetails->ItemAttributes->ListPrice);
+            $product->setListPrice($listPrice);
+        }
 
         //Offer
-        if($itemDetails->Offers->TotalOffers >0 ){
+        if ($itemDetails->Offers->TotalOffers > 0) {
             $offer = new Offer();
             $priceOffer = new Price();
             $priceOffer->setByResponseObject($itemDetails->Offers->Offer->OfferListing->Price);
             $offer->setByResponseObject($itemDetails, $priceOffer);
             $product->setOffers(array($offer));
         }
-        //Persist
-      /*  $entityManager = $this->getEntityManager();
-        $entityManager->persist($product);
-        $entityManager->flush();*/
+
         return $product;
     }
 
