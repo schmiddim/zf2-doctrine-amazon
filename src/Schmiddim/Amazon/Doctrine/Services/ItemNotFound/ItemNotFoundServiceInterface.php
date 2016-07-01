@@ -19,4 +19,11 @@ interface ItemNotFoundServiceInterface extends EntityServiceInterface
      */
     public function findByAsin($asins = array());
     public function existsByAsin($asin);
-}
+
+    /**
+     * @param array $isbns
+     * @return ItemNotFound[]
+     */
+    public function findByISBNS($isbns=array());
+
+    }

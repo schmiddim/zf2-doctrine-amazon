@@ -46,4 +46,17 @@ class ItemNotFoundService extends AbstractEntityService implements ItemNotFoundS
 
         ));
     }
+
+    public function findByISBNS($isbns = array())
+    {
+        $qb = $this->getRepository()->createQueryBuilder('i');
+        $isbns = $qb
+            ->where($qb->expr()->in('i.identifier', $isbns))
+            ->andWhere('i.identifierType LIKE :type')
+            ->setParameter(':type', 'ISBN')
+            ->getQuery()
+            ->getResult();
+
+        return $isbns;
+    }
 }
